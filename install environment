@@ -1,0 +1,24 @@
+I found lisa-lab's DeepLearningTutorials on Github(thx for their generosity and hardworking)
+
+they use a python package called theano
+
+I tried to install it with pip, and succeeded
+They I type "import theano" into python Shell
+
+But it says that "g++ not detected"
+
+I use windows. So I have to get MinGW in order to install g++
+
+
+I was helped by someone...
+http://zhidao.baidu.com/link?url=W8_-WP_eeJcOAedMViPXRadST1nWM86m39UYgIggNygy-8EgEMG39BIhxHIPkAoWgkmCf-YcN0LQ2Ey1T1-otq
+　　下载好MinGW后就安装，它是一组有用的工具集(这些工具将包含在$/bin目录下(其中 $代表您所选择的安装路径))。
+　　环境设置：对于我们这些使用者来说，最好是能够简单方便的使用工具。所以，我们就需要设置环境，便于我们使用MinGW。
+　　对于设置，我们只需要在环境变量中的PATH 变量中，添加$/bin这个路径就可以了，这样我们的gcd编译环境就搭配好了。
+　　比如我的安装路径为 D:CBCodeBlocksMinGWbin; 就在path里加入这个路径
+　　但是，我们还需要使用MinGW给我们提供的c++的标准库，和头文件，因此需要设置系统查找路径，
+　　如下：环境变量名 环境变量值
+　　MINGW $( $代表您所选择的安装路径如：D:CBCodeBlocksMinGW，自己进行修改)
+　　LIBRARY_PATH %MINGW%/lib
+　　然后用cmd进入cpp所在的路径，然后输入g++ hello.cpp
+　　桌面上会多一个a.exe文件，输入命令a即可运行并打印;
